@@ -1,0 +1,29 @@
+#SQL Query for Creating Table
+
+
+CREATE TABLE Participants (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phone_number VARCHAR(15) NOT NULL,
+    age INT NOT NULL,
+    feeStatus BOOLEAN NOT NULL DEFAULT FALSE,
+    batch VARCHAR(10) NOT NULL,
+    UNIQUE KEY (phone_number)
+);
+
+#SQL Query for User Enrollment
+
+INSERT INTO Participants (name, phone_number, age, feeStatus, batch)
+VALUES ('John Doe', '1234567890', 25, FALSE, '6-7AM');
+
+#SQL Query for Retrieving Participants
+
+SELECT * FROM Participants
+WHERE batch = '6-7AM';
+
+#SQL Query for Updating Payment Status
+
+UPDATE Participants
+SET feeStatus = TRUE
+WHERE phone_number = '1234567890' ;
+
