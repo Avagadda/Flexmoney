@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yoga Class Admission Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      max-width: 400px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    label, input, select {
+      display: block;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    input, select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      background-color: #0056b3;
+      
+    }
+  </style>
+</head>
+<body>
+  <form id="admissionForm" method="post">
+    <h1>Yoga Class Admission Form</h1>
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="name"  required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required min="18" max="65">
+
+    <label for="phoneno">Enter your phone number:</label>
+    <input type="tel" id="phoneno" name="phoneno" pattern="[0-9]{10}">
+    
+    <label for="selectedBatch">Select Batch:</label>
+    <select id="selectedBatch" name="batch">
+      <option value="6-7AM">6-7AM</option>
+      <option value="7-8AM">7-8AM</option>
+      <option value="8-9AM">8-9AM</option>
+      <option value="5-6PM">5-6PM</option>
+    </select>
+    <button type="submit" id="submit">Pay Fees of Rs.500 to Enroll</button>
+  </form>
+</body>
+</html>
